@@ -2,7 +2,7 @@
 
 ## Tutorial/Hackathon for the VESPA/PLANMAP Meeting Paris, 1-3 July 2019
 
-###Possible Tasks for participation
+### Possible Tasks for participation
 
 - Conceptual, e.g. which data to display
   - Basemaps (WMS)
