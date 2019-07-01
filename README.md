@@ -23,7 +23,7 @@
 
 - If Javascript:
  - just bookmark or app (e.g. Cordova)?
- - Which libary/framework? Cesium, OpenLayers, ol-cesium, leaflet
+ - Which libary/framework? Cesium, OpenLayers, [ol-cesium](https://openlayers.org/ol-cesium/), leaflet
  - Controls: ol-layerswitcher (pure/DIV)
 
 - [Cordova](./cordova-howto.md)
