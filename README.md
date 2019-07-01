@@ -1,4 +1,4 @@
-# mobile-ogc-client
+# Mobile-OGC-Client
 
 ## Tutorial/Hackathon for the VESPA/PLANMAP Meeting Paris, 1-3 July 2019
 
