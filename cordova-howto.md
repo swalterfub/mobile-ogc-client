@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-- Android SDK Tools
+- [Android SDK Tools](https://developer.android.com/studio/index.html)
 
 - [Gradle](https://gradle.org/install/)
 
