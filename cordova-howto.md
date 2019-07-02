@@ -51,9 +51,14 @@
   ```
   npm install -g cordova
   cordova create hello com.example.hello HelloWorld
-- Adapt HelloWorld example
+  ```
+- [Add platform](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms)
   ```
   cd hello
+  cordova platform add android
+  ```
+- Adapt HelloWorld example
+  ```
   vi www/index.html
   (paste code from Carlos)
   ```
