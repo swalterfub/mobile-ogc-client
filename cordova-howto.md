@@ -14,7 +14,8 @@
   sdkmanager "extras;android;m2repository"
   sdkmanager platform-tools
   ```
-  
+### Android Emulator
+
 - [Set up android emulator](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#setting-up-an-emulator)
   ```
   sdkmanager "system-images;android-29;google_apis;x86_64"
@@ -25,12 +26,20 @@
   emulator @pixel
   ```
 
-- npm install -g cordova
+### Cordova
 
-cordova create hello com.example.hello HelloWorld
-
-cd hello
-
-vi www/index.html
-
-(paste code from Carlos)
+- [Install cordova and create HalloWorld](
+  ```
+  npm install -g cordova
+  cordova create hello com.example.hello HelloWorld
+- Adapt HelloWorld example
+  ```
+  cd hello
+  vi www/index.html
+  (paste code from Carlos)
+  ```
+- Run Cordova in the emulator
+  ```
+  cordova run android
+  ```
+  
