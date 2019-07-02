@@ -2,11 +2,24 @@
 
 ## Android
 
-### Prerequisites
+### Install location
+  ```
+  export BASEDIR=~/android
+  mkdir $BASEDIR
+  ```
+
+### Prerequisites 
 
 - [Android SDK Tools](https://developer.android.com/studio/index.html)
+  ```
+  cd $BASEDIR; unzip ~/Downloads/sdk-tools-linux-4333796.zip
+  export PATH=$BASEDIR/tools:$PATH
+  ```
 
-- [Gradle](https://gradle.org/install/)
+- [Gradle (build system)](https://gradle.org/install/)
+  ```
+  cd $BASEDIR; unzip ~/Downloads/gradle-5.5-bin.zip
+  ```
 
 - [Direct dependencies for Cordova](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html)
   ```
@@ -14,6 +27,12 @@
   sdkmanager "extras;android;m2repository"
   sdkmanager platform-tools
   ```
+- [Setup Environment Variables](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#setting-environment-variables)
+  ```
+  export ANDROID_HOME=$BASEDIR
+  export PATH=$BASEDIR/platform-tools:$PATH
+  ```  
+
 ### Android Emulator
 
 - [Set up android emulator](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#setting-up-an-emulator)
