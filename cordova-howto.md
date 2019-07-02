@@ -47,7 +47,7 @@
 
 ### Cordova
 
-- [Install cordova and create HalloWorld](
+- [Install cordova and create HalloWorld](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#create-the-app)
   ```
   npm install -g cordova
   cordova create hello com.example.hello HelloWorld
