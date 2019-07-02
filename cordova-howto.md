@@ -10,8 +10,16 @@
 
 - [Direct dependencies for Cordova](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html)
   sdkmanager "build-tools;29.0.0"
-  sudo bin/sdkmanager "extras;android;m2repository"
-  sudo bin/sdkmanager platform-tools
+  sdkmanager "extras;android;m2repository"
+  sdkmanager platform-tools
+  
+- [Set up android emulator](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#setting-up-an-emulator)
+  sdkmanager "system-images;android-29;google_apis;x86_64"
+  sdkmanager emulator
+  avdmanager list
+  avdmanager create avd -d 17 -n pixel -k "system-images;android-29;google_apis;x86_64"
+  emulator -list-avds
+  emulator @pixel
 
 - npm install -g cordova
 
@@ -19,6 +27,6 @@ cordova create hello com.example.hello HelloWorld
 
 cd hello
 
-npm install ol
+vi www/index.html
 
-(start writing javascript code...)
+(paste code from Carlos)
