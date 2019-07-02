@@ -17,8 +17,10 @@
       maxNativeZoom: 9,
       attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
     };
-    L.tileLayer(basemap_url, basemap_options).addTo(map);
+    var basemap = L.tileLayer(basemap_url, basemap_options).addTo(map);
     map.fitBounds([[-180,-90],[180,90]]);
+
+    var control = L.control.layers(baseLayers={"OPM":basemap}).addTo(map);
 
     var wms_arsinoes = L.tileLayer.wms('https://geoserver.planmap.eu/mars/wms?', {
       layers:'mars:PM-MAR-MS-Crommelin_01',
@@ -26,6 +28,8 @@
       version:'1.1.0',
       transparent: true,
     }).addTo(map);
+
+    control.addOverlay(wms_arsinoes, "Crommelin");
 
     function loadWFS(layers) {
       var urlString = "https://geoserver.planmap.eu/mars/wms?";
@@ -45,7 +49,8 @@
           if (this.readyState == 4 && this.status == 200) {
               var geojson = JSON.parse(this.responseText);
               console.log(geojson);
-              L.geoJSON(geojson).addTo(map);
+              var gjs = L.geoJSON(geojson).addTo(map);
+              control.addOverlay(gjs, "Arsinoes");
           }
       };
       xmlhttp.open("GET", u, true);
