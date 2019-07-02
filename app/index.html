@@ -1,0 +1,32 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MapApp</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="mapcontainer" style="height:600; width:800"></div>
+
+  <script type="text/javascript">
+    var map = L.map('mapcontainer');
+    var basemap_url = 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png';
+    var basemap_options = {
+      crs: L.CRS.EPSG4326,
+      maxNativeZoom: 9,
+      // tms: false,
+      // autoZIndex: true,
+      attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+    };
+    L.tileLayer(basemap_url, basemap_options).addTo(map);
+    map.fitBounds([[-5,-5],[50,50]]);
+
+    var wms = L.tileLayer.wms('https://geoserver.planmap.eu/mars/wms?', {
+      layers:'mars:PM-MAR-MS-Arsinoes_01',
+      format:'image/png',
+      version:'1.1.0',
+      // bbox:'-30.283,-12.07,-25.485,-5.9'
+    }).addTo(map);
+  </script>
+</body>
