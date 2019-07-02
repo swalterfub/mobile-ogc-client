@@ -9,17 +9,21 @@
 - [Gradle](https://gradle.org/install/)
 
 - [Direct dependencies for Cordova](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html)
-   sdkmanager "build-tools;29.0.0"
-   sdkmanager "extras;android;m2repository"
-   sdkmanager platform-tools
+  ```
+  sdkmanager "build-tools;29.0.0"
+  sdkmanager "extras;android;m2repository"
+  sdkmanager platform-tools
+  ```
   
 - [Set up android emulator](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#setting-up-an-emulator)
-   sdkmanager "system-images;android-29;google_apis;x86_64"
-   sdkmanager emulator
-   avdmanager list
-   avdmanager create avd -d 17 -n pixel -k "system-images;android-29;google_apis;x86_64"
-   emulator -list-avds
-   emulator @pixel
+  ```
+  sdkmanager "system-images;android-29;google_apis;x86_64"
+  sdkmanager emulator
+  avdmanager list
+  avdmanager create avd -d 17 -n pixel -k "system-images;android-29;google_apis;x86_64"
+  emulator -list-avds
+  emulator @pixel
+  ```
 
 - npm install -g cordova
 
