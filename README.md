@@ -30,4 +30,6 @@
   
 - see leaflet code by @chbrandt at [src/index.html](src/index.html)
 
+  [Also available as github page for this repository](https://swalterfub.github.io/mobile-ogc-client/src/index.html)
+
 - [Cordova](./cordova-howto.md)
