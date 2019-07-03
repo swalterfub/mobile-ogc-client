@@ -11,7 +11,7 @@
 
   <script type="text/javascript">
     var map = L.map('mapcontainer');
-    var basemap_url = 'http://astro.arcgis.com/arcgis/rest/services/OnMars/HiRISELS/base/MapServer/tile/{z}/{y}/{x}.png';
+    var basemap_url = 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png';
     var basemap_options = {
       crs: L.CRS.EPSG4326,
       maxNativeZoom: 9,
@@ -22,6 +22,13 @@
 
     var control = L.control.layers(baseLayers={"OPM":basemap}).addTo(map);
 
+    var tms_arsinoes = L.tileLayer('http://astro.arcgis.com/arcgis/rest/services/OnMars/HiRISELS/base/MapServer/tile/{z}/{y}/{x}.png', {
+      tms:true,
+      transparent: true,
+      attribution: 'USGS Astrogeology'
+    }).addTo(map);
+    
+    
     var wms_arsinoes = L.tileLayer.wms('https://geoserver.planmap.eu/mars/wms?', {
       layers:'mars:PM-MAR-MS-Crommelin_01',
       format:'image/png',
