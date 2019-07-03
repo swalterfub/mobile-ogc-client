@@ -19,6 +19,7 @@
 - [Gradle (build system)](https://gradle.org/install/)
   ```
   cd $BASEDIR; unzip ~/Downloads/gradle-5.5-bin.zip
+  export PATH=$BASEDIR/gradle-5.5/bin:$PATH
   ```
 
 - [Direct dependencies for Cordova](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html)
