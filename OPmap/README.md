@@ -1,6 +1,11 @@
 ### How to use this cordova folder
 
-- first, set up cordova paths, eg. source ../cordova-enf.sh
+- first, set up cordova paths, eg. source ../cordova-env.sh
+
+- install dependencies
+  ```
+  npm install
+  ```
 
 - then, install android target and run
     ```
