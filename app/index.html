@@ -22,12 +22,11 @@
 
     var control = L.control.layers(baseLayers={"OPM":basemap}).addTo(map);
 
-    var tms_arsinoes = L.tileLayer('http://astro.arcgis.com/arcgis/rest/services/OnMars/HiRISELS/base/MapServer/tile/{z}/{y}/{x}.png', {
-      tms:true,
-      transparent: true,
+    var tms_hirise = L.tileLayer('http://astro.arcgis.com/arcgis/rest/services/OnMars/HiRISELS/base/MapServer/tile/{z}/{y}/{x}.png', {
       attribution: 'USGS Astrogeology'
     }).addTo(map);
-    
+
+    control.addOverlay(tms_hirise, "Hirise");
     
     var wms_arsinoes = L.tileLayer.wms('https://geoserver.planmap.eu/mars/wms?', {
       layers:'mars:PM-MAR-MS-Crommelin_01',
