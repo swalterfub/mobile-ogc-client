@@ -28,6 +28,6 @@
   - Which libary/framework? Cesium, OpenLayers, [ol-cesium](https://openlayers.org/ol-cesium/), leaflet
   - Controls: ol-layerswitcher (pure/DIV)
   
-- see leaflet code by @chbrandt at [app/index.html](app/index.html)
+- see leaflet code by @chbrandt at [src/index.html](src/index.html)
 
 - [Cordova](./cordova-howto.md)
