@@ -1,6 +1,6 @@
-# Apache Cordova
+# [Apache Cordova](https://cordova.apache.org/)
 
-## Android
+## Android / Linux
 
 ### Install location
   ```
@@ -47,17 +47,19 @@
 
 ### Cordova
 
-- [Install cordova and create HalloWorld](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#create-the-app)
+- [Install cordova and create HelloWorld](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#create-the-app)
   ```
   npm install -g cordova
+  npm search cordova:template
   cordova create hello com.example.hello HelloWorld
+  ls hello
   ```
 - [Add platform](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms)
   ```
   cd hello
   cordova platform add android
   ```
-- Adapt HelloWorld example
+- Adapt HelloWorld template
   ```
   vi www/index.html
   (paste code from Carlos)
